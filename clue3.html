@@ -22,6 +22,14 @@
 <body>
   <div class="clue-container">
     <h1>Clue 3: Bath Room</h1>
+
+    <div class="audio-buttons">
+      <button onclick="playAudio()">Play Audio</button>
+      <button onclick="pauseAudio()">Pause Audio</button>
+    </div>
+    
+    <audio id="audio" src="bathroom.mp3" preload="auto" autoplay></audio>
+
     <p>Welcome to the Bath Room, a place of relaxation and solitude. As you explore this room, keep your eyes open for a hidden horcrux that carries the legacy of one of Hogwarts' founders.</p>
     <p>What do you think is the horcrux hidden in this room?</p>
     <form id="horcrux-form">
@@ -47,7 +55,7 @@
 
   <script>
     function goBack() {
-      window.history.back();
+      window.location.href = "index.html";
     }
 
     function checkAnswer(event) {
@@ -62,6 +70,16 @@
         alert("Sorry, that's not correct. Keep searching!");
       }
     }
+
+    function playAudio() {
+    const audio = document.getElementById('audio');
+    audio.play();
+  }
+
+  function pauseAudio() {
+    const audio = document.getElementById('audio');
+    audio.pause();
+  }
   </script>
 </body>
 </html>

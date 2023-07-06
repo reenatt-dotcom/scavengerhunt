@@ -22,6 +22,14 @@
 <body>
   <div class="clue-container">
     <h1>Clue 2: Great Hall</h1>
+
+    <div class="audio-buttons">
+      <button onclick="playAudio()">Play Audio</button>
+      <button onclick="pauseAudio()">Pause Audio</button>
+    </div>
+    
+    <audio id="audio" src="greathall.mp3" preload="auto" autoplay></audio>
+
     <p>Welcome to the Great Hall, the heart of Hogwarts. It's a place where students gather and feasts are held. Search the room for an artifact that holds the essence of a powerful Hogwarts founder.</p>
     <p>What do you think is the horcrux hidden in this room?</p>
     <form id="horcrux-form">
@@ -47,7 +55,7 @@
 
   <script>
     function goBack() {
-      window.history.back();
+      window.location.href = "index.html";
     }
 
     function checkAnswer(event) {
@@ -62,6 +70,17 @@
         alert("Sorry, that's not correct. Keep searching!");
       }
     }
+
+    function playAudio() {
+    const audio = document.getElementById('audio');
+    audio.play();
+  }
+
+  function pauseAudio() {
+    const audio = document.getElementById('audio');
+    audio.pause();
+  }
+
   </script>
 </body>
 </html>

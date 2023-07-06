@@ -23,6 +23,14 @@
 <body>
   <div class="clue-container">
     <h1>Clue 4: Harry's Room</h1>
+
+    <div class="audio-buttons">
+      <button onclick="playAudio()">Play Audio</button>
+      <button onclick="pauseAudio()">Pause Audio</button>
+    </div>
+    
+    <audio id="audio" src="harrysroom.mp3" preload="auto" autoplay></audio>
+
     <p>Welcome to Harry's Room, the place where the Boy Who Lived resides. As you explore this room, you'll come across a unique horcrux that carries a significant part of the magical world's history.</p>
     <p>Can you identify the horcrux hidden in this room?</p>
     <form id="horcrux-form">
@@ -48,7 +56,7 @@
 
   <script>
     function goBack() {
-      window.history.back();
+      window.location.href = "index.html";
     }
 
     function checkAnswer(event) {
@@ -63,6 +71,16 @@
         alert("Oops! That's not the correct horcrux. Keep searching!");
       }
     }
+
+    function playAudio() {
+    const audio = document.getElementById('audio');
+    audio.play();
+  }
+
+  function pauseAudio() {
+    const audio = document.getElementById('audio');
+    audio.pause();
+  }
   </script>
 </body>
 </html>

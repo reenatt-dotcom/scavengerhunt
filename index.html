@@ -6,70 +6,103 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body style="background-image: url('maraudersmap.gif'); background-size: cover;">
-    <div class="map-container">
-      <!-- <img src="transparent-pixel.png" alt="Transparent Pixel" usemap="#map-areas"> -->
-      <map name="map-areas">
-        <area class="location-rect" href="clue1.html" alt="Potions Room" style="border: 2px solid red;">
-        <area class="location-rect" href="clue2.html" alt="Great Hall" style="border: 2px solid blue;">
-        <area class="location-rect" href="clue3.html" alt="Harry's Room" style="border: 2px solid green;">
-        <area class="location-rect" href="clue4.html" alt="Bath Room" style="border: 2px solid yellow;">
-        <area class="location-rect" href="clue5.html" alt="Forbidden Forest" style="border: 2px solid orange;">
-        <!-- Add more area tags for other locations -->
-      </map>
-    </div>
-  
-    <footer class="footer">
-      <p>&copy; 2023 Harry Potter Scavenger Hunt. All rights reserved.</p>
-    </footer>
-  
-    <style>
-      .map-container {
-        position: relative;
-        width: 100%;
-        height: 100vh;
-      }
-  
-      .location-rect {
-        position: absolute;
-        /* Adjust the values below to position the rectangles */
-        left: 380px;
-        top: 320px;
-        width: 300px;
-        height: 415px;
-      }
-  
-      .location-rect:nth-child(2) {
-        left: 700px;
-        top: 320px;
-        width: 330px;
-        height: 415px;
-      }
-  
-      .location-rect:nth-child(3) {
-        left: 1050px;
-        top: 550px;
-        width: 130px;
-        height: 190px;
-      }
-  
-      .location-rect:nth-child(4) {
-        left: 1330px;
-        top: 320px;
-        width: 380px;
-        height: 80px;
-      }
-  
-      .location-rect:nth-child(5) {
-        left: 380px;
-        top: 760px;
-        width: 800px;
-        height: 150px;
-      }
-    </style>
-  </body>
-  
-  
-  
-  
-  
+  <div class="audio-controls">
+    <button id="play-button">Play</button>
+    <button id="pause-button">Pause</button>
+  </div>
+
+  <div class="map-container">
+    <map name="map-areas">
+      <area class="location-rect" href="clue1.html" alt="Potions Room">
+      <area class="location-rect" href="clue2.html" alt="Great Hall">
+      <area class="location-rect" href="clue3.html" alt="Harry's Room">
+      <area class="location-rect" href="clue4.html" alt="Bath Room">
+      <area class="location-rect" href="clue5.html" alt="Forbidden Forest">
+      <!-- Add more area tags for other locations -->
+    </map>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2023 Harry Potter Scavenger Hunt. All rights reserved.</p>
+  </footer>
+
+  <audio id="background-audio" src="hedwigstheme.mp3" autoplay></audio>
+
+  <script>
+    const audio = document.getElementById('background-audio');
+    const playButton = document.getElementById('play-button');
+    const pauseButton = document.getElementById('pause-button');
+
+    playButton.addEventListener('click', () => {
+      audio.play();
+    });
+
+    pauseButton.addEventListener('click', () => {
+      audio.pause();
+    });
+  </script>
+
+  <style>
+    .audio-controls {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 9999;
+      text-align: center;
+    }
+
+    .audio-controls button {
+      margin: 0 10px;
+    }
+
+    .map-container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .location-rect {
+      position: absolute;
+      /* Adjust the values below to position the rectangles */
+      left: 380px;
+      top: 320px;
+      width: 300px;
+      height: 415px;
+      border: 2px solid red;
+    }
+
+    .location-rect:nth-child(2) {
+      left: 700px;
+      top: 320px;
+      width: 330px;
+      height: 415px;
+      border: 2px solid blue;
+    }
+
+    .location-rect:nth-child(3) {
+      left: 1050px;
+      top: 550px;
+      width: 130px;
+      height: 190px;
+      border: 2px solid green;
+    }
+
+    .location-rect:nth-child(4) {
+      left: 1330px;
+      top: 320px;
+      width: 380px;
+      height: 80px;
+      border: 2px solid yellow;
+    }
+
+    .location-rect:nth-child(5) {
+      left: 380px;
+      top: 760px;
+      width: 800px;
+      height: 150px;
+      border: 2px solid orange;
+    }
+  </style>
+</body>
 </html>

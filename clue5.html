@@ -22,6 +22,14 @@
 <body>
   <div class="clue-container">
     <h1>Clue 5: Forbidden Forest</h1>
+
+    <div class="audio-buttons">
+      <button onclick="playAudio()">Play Audio</button>
+      <button onclick="pauseAudio()">Pause Audio</button>
+    </div>
+    
+    <audio id="audio" src="doubletrouble.mp3" preload="auto" autoplay></audio>
+
     <p>Welcome to the Forbidden Forest, a place of mystery and danger. Deep within this enchanted forest, a powerful horcrux is concealed, carrying the essence of one of the Hogwarts founders.</p>
     <p>Can you guess the horcrux hidden in the depths of the Forbidden Forest?</p>
     <form id="horcrux-form">
@@ -47,7 +55,7 @@
 
   <script>
     function goBack() {
-      window.history.back();
+      window.location.href = "index.html";
     }
 
     function checkAnswer(event) {
@@ -62,6 +70,16 @@
         alert("Oops! That's not the correct horcrux. Keep searching!");
       }
     }
+
+    function playAudio() {
+    const audio = document.getElementById('audio');
+    audio.play();
+  }
+
+  function pauseAudio() {
+    const audio = document.getElementById('audio');
+    audio.pause();
+  }
   </script>
 </body>
 </html>
