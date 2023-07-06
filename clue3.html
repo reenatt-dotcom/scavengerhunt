@@ -2,23 +2,23 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Harry Potter Scavenger Hunt - Clue 1</title>
+  <title>Harry Potter Scavenger Hunt - Clue 3</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
   <div class="clue-container">
-    <h1>Clue 1: Potions Room</h1>
-    <p>Welcome to the Potions Room! Explore the shelves and ingredients with care. Seek the object that holds the essence of a dark wizard's memories.</p>
+    <h1>Clue 3: Bath Room</h1>
+    <p>Welcome to the Bath Room, a place of relaxation and solitude. As you explore this room, keep your eyes open for a hidden horcrux that carries the legacy of one of Hogwarts' founders.</p>
     <p>What do you think is the horcrux hidden in this room?</p>
     <form id="horcrux-form">
       <input type="radio" id="option1" name="horcrux" value="1">
-      <label for="option1">A vial of memories</label><br>
+      <label for="option1">The Mirror of Erised</label><br>
       <input type="radio" id="option2" name="horcrux" value="2">
-      <label for="option2">A preserved snake fang</label><br>
+      <label for="option2">The Marauder's Map</label><br>
       <input type="radio" id="option3" name="horcrux" value="3">
-      <label for="option3">A potion cauldron</label><br>
+      <label for="option3">Salazar Slytherin's Locket</label><br>
       <input type="radio" id="option4" name="horcrux" value="4">
-      <label for="option4">A worn-out diary</label><br>
+      <label for="option4">The Sword of Gryffindor</label><br>
       <input type="submit" value="Submit" onclick="checkAnswer(event)">
     </form>
   </div>
@@ -42,8 +42,8 @@
       const horcruxForm = document.getElementById('horcrux-form');
       const selectedOption = horcruxForm.elements['horcrux'].value;
       
-      if (selectedOption === '4') {
-        alert("Congratulations! You guessed correctly! The horcrux in the Potions Room is a worn-out diary.");
+      if (selectedOption === '3') {
+        alert("Congratulations! You guessed correctly! The horcrux in the Bath Room is Salazar Slytherin's Locket.");
       } else {
         alert("Sorry, that's not correct. Keep searching!");
       }

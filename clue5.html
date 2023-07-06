@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Harry Potter Scavenger Hunt - Clue 5</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="clue-container">
+    <h1>Clue 5: Forbidden Forest</h1>
+    <p>Welcome to the Forbidden Forest, a place of mystery and danger. Deep within this enchanted forest, a powerful horcrux is concealed, carrying the essence of one of the Hogwarts founders.</p>
+    <p>Can you guess the horcrux hidden in the depths of the Forbidden Forest?</p>
+    <form id="horcrux-form">
+      <input type="radio" id="horcrux1" name="horcrux" value="ravenclaw_diadem">
+      <label for="horcrux1">A. Ravenclaw's Diadem</label><br>
+      <input type="radio" id="horcrux2" name="horcrux" value="hufflepuff_cup">
+      <label for="horcrux2">B. Hufflepuff's Cup</label><br>
+      <input type="radio" id="horcrux3" name="horcrux" value="slytherin_locket">
+      <label for="horcrux3">C. Slytherin's Locket</label><br>
+      <input type="radio" id="horcrux4" name="horcrux" value="gryffindor_sword">
+      <label for="horcrux4">D. Gryffindor's Sword</label><br>
+      <button type="submit" onclick="checkAnswer(event)">Submit</button>
+    </form>
+  </div>
+
+  <div class="button-container">
+    <button onclick="goBack()">Go Back to the Map</button>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2023 Harry Potter Scavenger Hunt. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+
+    function checkAnswer(event) {
+      event.preventDefault();
+
+      const horcruxForm = document.getElementById('horcrux-form');
+      const selectedHorcrux = horcruxForm.elements['horcrux'].value;
+
+      if (selectedHorcrux === "ravenclaw_diadem") {
+        alert("Congratulations! You chose the correct horcrux. Rowena Ravenclaw's Diadem is the horcrux hidden deep within the Forbidden Forest.");
+      } else {
+        alert("Oops! That's not the correct horcrux. Keep searching!");
+      }
+    }
+  </script>
+</body>
+</html>

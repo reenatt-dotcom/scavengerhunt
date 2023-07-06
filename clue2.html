@@ -2,23 +2,23 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Harry Potter Scavenger Hunt - Clue 1</title>
+  <title>Harry Potter Scavenger Hunt - Clue 2</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
   <div class="clue-container">
-    <h1>Clue 1: Potions Room</h1>
-    <p>Welcome to the Potions Room! Explore the shelves and ingredients with care. Seek the object that holds the essence of a dark wizard's memories.</p>
+    <h1>Clue 2: Great Hall</h1>
+    <p>Welcome to the Great Hall, the heart of Hogwarts. It's a place where students gather and feasts are held. Search the room for an artifact that holds the essence of a powerful Hogwarts founder.</p>
     <p>What do you think is the horcrux hidden in this room?</p>
     <form id="horcrux-form">
       <input type="radio" id="option1" name="horcrux" value="1">
-      <label for="option1">A vial of memories</label><br>
+      <label for="option1">The Sorting Hat</label><br>
       <input type="radio" id="option2" name="horcrux" value="2">
-      <label for="option2">A preserved snake fang</label><br>
+      <label for="option2">Helga Hufflepuff's Cup</label><br>
       <input type="radio" id="option3" name="horcrux" value="3">
-      <label for="option3">A potion cauldron</label><br>
+      <label for="option3">Rowena Ravenclaw's Diadem</label><br>
       <input type="radio" id="option4" name="horcrux" value="4">
-      <label for="option4">A worn-out diary</label><br>
+      <label for="option4">Salazar Slytherin's Locket</label><br>
       <input type="submit" value="Submit" onclick="checkAnswer(event)">
     </form>
   </div>
@@ -42,8 +42,8 @@
       const horcruxForm = document.getElementById('horcrux-form');
       const selectedOption = horcruxForm.elements['horcrux'].value;
       
-      if (selectedOption === '4') {
-        alert("Congratulations! You guessed correctly! The horcrux in the Potions Room is a worn-out diary.");
+      if (selectedOption === '2') {
+        alert("Congratulations! You guessed correctly! The horcrux in the Great Hall is Helga Hufflepuff's Cup.");
       } else {
         alert("Sorry, that's not correct. Keep searching!");
       }

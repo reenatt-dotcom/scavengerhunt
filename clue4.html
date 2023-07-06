@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Harry Potter Scavenger Hunt - Clue 4</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="clue-container">
+    <h1>Clue 4: Harry's Room</h1>
+    <p>Welcome to Harry's Room, the place where the Boy Who Lived resides. As you explore this room, you'll come across a unique horcrux that carries a significant part of the magical world's history.</p>
+    <p>Can you identify the horcrux hidden in this room?</p>
+    <form id="horcrux-form">
+      <input type="radio" id="horcrux1" name="horcrux" value="harry_potter">
+      <label for="horcrux1">A. Harry Potter</label><br>
+      <input type="radio" id="horcrux2" name="horcrux" value="hufflepuff_cup">
+      <label for="horcrux2">B. Hufflepuff's Cup</label><br>
+      <input type="radio" id="horcrux3" name="horcrux" value="gryffindor_sword">
+      <label for="horcrux3">C. Gryffindor's Sword</label><br>
+      <input type="radio" id="horcrux4" name="horcrux" value="ravenclaw_diadem">
+      <label for="horcrux4">D. Ravenclaw's Diadem</label><br>
+      <button type="submit" onclick="checkAnswer(event)">Submit</button>
+    </form>
+  </div>
+
+  <div class="button-container">
+    <button onclick="goBack()">Go Back to the Map</button>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2023 Harry Potter Scavenger Hunt. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+
+    function checkAnswer(event) {
+      event.preventDefault();
+
+      const horcruxForm = document.getElementById('horcrux-form');
+      const selectedHorcrux = horcruxForm.elements['horcrux'].value;
+
+      if (selectedHorcrux === "harry_potter") {
+        alert("Congratulations! You chose the correct horcrux. Harry Potter himself is the horcrux hidden in this room.");
+      } else {
+        alert("Oops! That's not the correct horcrux. Keep searching!");
+      }
+    }
+  </script>
+</body>
+</html>
