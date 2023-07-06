@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Harry Potter Scavenger Hunt</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body style="background-image: url('maraudersmap.gif'); background-size: cover;">
+    <div class="map-container">
+      <!-- <img src="transparent-pixel.png" alt="Transparent Pixel" usemap="#map-areas"> -->
+      <map name="map-areas">
+        <area class="location-rect" href="clue1.html" alt="Potions Room" style="border: 2px solid red;">
+        <area class="location-rect" href="clue2.html" alt="Great Hall" style="border: 2px solid blue;">
+        <area class="location-rect" href="clue3.html" alt="Harry's Room" style="border: 2px solid green;">
+        <area class="location-rect" href="clue4.html" alt="Bath Room" style="border: 2px solid yellow;">
+        <area class="location-rect" href="clue5.html" alt="Forbidden Forest" style="border: 2px solid orange;">
+        <!-- Add more area tags for other locations -->
+      </map>
+    </div>
+  
+    <footer class="footer">
+      <p>&copy; 2023 Harry Potter Scavenger Hunt. All rights reserved.</p>
+    </footer>
+  
+    <style>
+      .map-container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+      }
+  
+      .location-rect {
+        position: absolute;
+        /* Adjust the values below to position the rectangles */
+        left: 380px;
+        top: 320px;
+        width: 300px;
+        height: 415px;
+      }
+  
+      .location-rect:nth-child(2) {
+        left: 700px;
+        top: 320px;
+        width: 330px;
+        height: 415px;
+      }
+  
+      .location-rect:nth-child(3) {
+        left: 1050px;
+        top: 550px;
+        width: 130px;
+        height: 190px;
+      }
+  
+      .location-rect:nth-child(4) {
+        left: 1330px;
+        top: 320px;
+        width: 380px;
+        height: 80px;
+      }
+  
+      .location-rect:nth-child(5) {
+        left: 380px;
+        top: 760px;
+        width: 800px;
+        height: 150px;
+      }
+    </style>
+  </body>
+  
+  
+  
+  
+  
+</html>
