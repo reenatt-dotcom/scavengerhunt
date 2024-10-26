@@ -1,46 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensure responsiveness -->
   <title>Hogwarts Horcrux Hunt</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body style="background-image: url('maraudersmap.gif'); background-size: cover;">
-  <div class="audio-controls">
-    <button id="play-button">Play</button>
-    <button id="pause-button">Pause</button>
-  </div>
-
-  <div class="map-container">
-    <map name="map-areas">
-      <area class="location-rect" href="clue1.html" alt="Potions Room">
-      <area class="location-rect" href="clue2.html" alt="Great Hall">
-      <area class="location-rect" href="clue3.html" alt="Harry's Room">
-      <area class="location-rect" href="clue4.html" alt="Bath Room">
-      <area class="location-rect" href="clue5.html" alt="Forbidden Forest">
-      <!-- Add more area tags for other locations -->
-    </map>
-  </div>
-
-  
-
-  <audio id="background-audio" src="hedwigstheme.mp3" autoplay></audio>
-
-  <script>
-    const audio = document.getElementById('background-audio');
-    const playButton = document.getElementById('play-button');
-    const pauseButton = document.getElementById('pause-button');
-
-    playButton.addEventListener('click', () => {
-      audio.play();
-    });
-
-    pauseButton.addEventListener('click', () => {
-      audio.pause();
-    });
-  </script>
-
   <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden; /* Prevent scrolling */
+      height: 100vh; /* Set body height */
+      position: relative; /* Allow absolute positioning of children */
+    }
+
     .audio-controls {
       position: fixed;
       top: 20px;
@@ -55,9 +28,14 @@
     }
 
     .map-container {
-      position: relative;
-      width: 100%;
-      height: 100vh;
+      position: absolute; /* Ensure it covers the whole viewport */
+      top: 0;
+      left: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      background: url('maraudersmap.gif') no-repeat center center; /* Use the map image */
+      background-size: cover; /* Cover the area */
+      overflow: hidden; /* Hide any overflow */
     }
 
     .location-rect {
@@ -102,5 +80,38 @@
       border: 2px solid orange;
     }
   </style>
+</head>
+<body>
+  <div class="audio-controls">
+    <button id="play-button">Play</button>
+    <button id="pause-button">Pause</button>
+  </div>
+
+  <div class="map-container">
+    <map name="map-areas">
+      <area class="location-rect" href="clue1.html" alt="Potions Room">
+      <area class="location-rect" href="clue2.html" alt="Great Hall">
+      <area class="location-rect" href="clue3.html" alt="Harry's Room">
+      <area class="location-rect" href="clue4.html" alt="Bath Room">
+      <area class="location-rect" href="clue5.html" alt="Forbidden Forest">
+      <!-- Add more area tags for other locations -->
+    </map>
+  </div>
+
+  <audio id="background-audio" src="hedwigstheme.mp3" autoplay></audio>
+
+  <script>
+    const audio = document.getElementById('background-audio');
+    const playButton = document.getElementById('play-button');
+    const pauseButton = document.getElementById('pause-button');
+
+    playButton.addEventListener('click', () => {
+      audio.play();
+    });
+
+    pauseButton.addEventListener('click', () => {
+      audio.pause();
+    });
+  </script>
 </body>
 </html>
